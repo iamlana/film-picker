@@ -8,8 +8,3 @@ export interface FilmProps {
   posterSmall: string;
   pgRating: string;
 }
-
-export interface PickedFilmsContextType {
-  pickedFilms?: FilmProps[];
-  // addPickedFilm?: (film: FilmProps) => void;
-}
