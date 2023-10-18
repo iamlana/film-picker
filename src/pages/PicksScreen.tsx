@@ -18,7 +18,7 @@ export function PicksScreen() {
         <img src={AdmissionTickets} width="48px" />
         <h1 className="text-3xl md:text-5xl">Your chosen movies</h1>
       </span>
-      <ul className="grow flex flex-col justify-between w-max mx-auto py-16 w-auto">
+      <ul className="grow flex flex-col justify-between mx-auto py-16 w-auto">
         {pickedFilms.map((film) => (
           <li key={film.rank} className="relative mb-2 pl-9">
             <span className="flex flex-row gap-6 items-center justify-start">
