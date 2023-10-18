@@ -32,6 +32,7 @@ export function Films() {
     const getData = async () => {
       const resp = await fetch("data.json");
       const json = await resp.json();
+      console.log(json)
       setFilms(randomizeFilmsOrder(json));
     };
     getData();
