@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Dislike from "../assets/dislike.png";
 import Like from "../assets/like.png";
 import Star from "../assets/star.png";
+import NoPoster from "../assets/no-poster.png";
 import { FilmProps } from "../types";
 
 interface FilmCardProps {
@@ -28,7 +29,7 @@ export function FilmCard(props: FilmCardProps) {
       </span>
       <div className="h-[55vh] max-w-full">
         <img
-          src={isError ? "./src/assets/no-poster.png" : props.film?.posterLarge}
+          src={isError ? NoPoster : props.film?.posterLarge}
           className="w-full h-full object-contain"
           loading="lazy"
           onError={() => setIsError(true)}
