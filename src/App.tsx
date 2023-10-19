@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import { PickedFilmsContext } from "./context";
 import { Films } from "./pages/Films";
 import { Home } from "./pages/Home";

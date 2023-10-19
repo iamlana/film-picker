@@ -30,13 +30,13 @@ export function FilmCard(props: FilmCardProps) {
         <img
           src={isError ? "./src/assets/no-poster.png" : props.film?.posterLarge}
           className="w-full h-full object-contain"
+          loading="lazy"
           onError={() => setIsError(true)}
         />
       </div>
       <div className="flex flex-row justify-between items-center">
         <img
           src={Dislike}
-          loading="lazy"
           className="w-8 md:w-12 min-w-8 md:min-w-12"
           onClick={props.onDislike}
         />
