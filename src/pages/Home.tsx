@@ -4,7 +4,7 @@ import { DeveloperInfo } from "../components/DeveloperInfo";
 
 export function Home() {
   return (
-    <div className="home flex flex-col h-screen justify-between p-5">
+    <div className="home-screen">
       <div className="grow flex flex-col text-5xl items-center justify-center px-5 gap-8">
         <h2 className="text-center font-bold">
           Pick your five <br />

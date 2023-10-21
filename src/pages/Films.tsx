@@ -69,7 +69,7 @@ export function Films() {
 
   return (
     <div
-      className="films flex flex-col h-screen justify-between p-5"
+      className="films-screen"
       style={{ backgroundImage: bgGradient }}>
         <Link
           to="/top-five"

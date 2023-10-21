@@ -27,7 +27,7 @@ export function FilmCard(props: FilmCardProps) {
           {props.film?.starRating}
         </span>
       </span>
-      <div className="h-[55vh] max-w-full">
+      <div className="h-[50vh] max-w-full">
         <img
           src={isError ? NoPoster : props.film?.posterLarge}
           className="w-full h-full object-contain"
