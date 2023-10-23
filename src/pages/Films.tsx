@@ -13,7 +13,7 @@ export function Films() {
   const [pickedFilms, setPickedFilms] = useContext(PickedFilmsContext);
   const currentFilmData = films.at(currentFilm) as FilmProps;
   const navigate = useNavigate();
-  let remainingPicks = 5 - pickedFilms.length;
+  const remainingPicks = 5 - pickedFilms.length;
   const [bgGradient, setBgGradient] = useState("");
 
   const img: HTMLImageElement = new Image();
@@ -24,7 +24,7 @@ export function Films() {
     const [color1, color2] = getMainColors(img);
 
     setBgGradient(
-      `radial-gradient(50% 50% at 50% 50%, ${color1} 0%, ${color2} 100%)`
+      `radial-gradient(50% 50% at 50% 50%, ${color1} 0%, ${color2} 100%)`,
     );
   };
 
@@ -37,7 +37,7 @@ export function Films() {
     getData();
   }, []);
 
-  function randomizeFilmsOrder(films: any) {
+  function randomizeFilmsOrder(films: FilmProps[]) {
     const randomizedFilms = films.sort(() => Math.random() - 0.5);
     return randomizedFilms;
   }
@@ -68,16 +68,15 @@ export function Films() {
   }
 
   return (
-    <div
-      className="films-screen"
-      style={{ backgroundImage: bgGradient }}>
-        <Link
-          to="/top-five"
-          className="flex-none flex flex-row items-center align-middle justify-end gap-2 pb-4">
-          <img src={AdmissionTickets} width="32px" />
-          <p>{remainingPicks} picks remaining</p>
-        </Link>
-        <div className="grow mb-4">
+    <div className="films-screen" style={{ backgroundImage: bgGradient }}>
+      <Link
+        to="/top-five"
+        className="flex-none flex flex-row items-center align-middle justify-end gap-2 pb-4"
+      >
+        <img src={AdmissionTickets} width="32px" />
+        <p>{remainingPicks} picks remaining</p>
+      </Link>
+      <div className="grow mb-4">
         {currentFilmData && currentFilmData.posterLarge && (
           <FilmCard
             onLike={onLike}
@@ -85,7 +84,7 @@ export function Films() {
             film={currentFilmData}
           />
         )}
-        </div>
+      </div>
       <DeveloperInfo />
     </div>
   );

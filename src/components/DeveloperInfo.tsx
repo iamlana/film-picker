@@ -8,7 +8,8 @@ export function DeveloperInfo() {
         <a
           href="https://github.com/iamlana"
           target="_blank"
-          className="underline underline-offset-2">
+          className="underline underline-offset-2"
+        >
           See other projects
         </a>
       </span>

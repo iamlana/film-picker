@@ -6,7 +6,7 @@ import { PickedFilmsContext } from "../context";
 import { DeveloperInfo } from "../components/DeveloperInfo";
 
 export function PicksScreen() {
-  let [pickedFilms, setPickedFilms] = useContext(PickedFilmsContext);
+  const [pickedFilms, setPickedFilms] = useContext(PickedFilmsContext);
 
   function onStartAgain() {
     setPickedFilms([]);
@@ -31,7 +31,8 @@ export function PicksScreen() {
       <Link
         onClick={onStartAgain}
         to="/films"
-        className="text-3xl font-bold flex flex-row gap-4 align-middle justify-center items-center mb-4">
+        className="text-3xl font-bold flex flex-row gap-4 align-middle justify-center items-center mb-4"
+      >
         {pickedFilms.length ? (
           <h2>Pick another five</h2>
         ) : (
