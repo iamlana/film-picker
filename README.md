@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+# 🎬 Film Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Try it yourself now: https://film-picker-iamlana.netlify.app/
 
-Currently, two official plugins are available:
+![Screenshot](./src/assets/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Introducing "Film Picker" – a curated selection of 250 films for you to discover. Crafted with React, powered by Vite, and styled elegantly with TailwindCSS. Your cinematic choices have never looked this good!
 
-## Expanding the ESLint configuration
+## 🌟 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ - **Vast Selection**: Dive into a collection of 250 films. After picking 5 films, you'll automatically be taken to a screen showcasing your choices.
+ - **Like or Dislike** (Just like Tinder 😉): Express your cinematic taste by liking or disliking films.
+ - **Dynamic Background**: Every film poster uniquely defines the background color, creating an immersive experience.
+ - **Your Top 5**: After picking 5 films, get an overview screen displaying your selections.
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- **React**: The foundational building block of the application.
+- **Vite**: Blazing fast build tool that provides an exceptional developer experience.
+- **TailwindCSS**: Utility-first CSS framework for rapid UI development.
+
+## 🚀 Getting Started
+
+1. Clone the repository:
 ```
+git clone https://github.com/your-username/film-picker.git
+```
+2. Navigate into the directory:
+```
+cd film-picker
+```
+3. Install dependencies:
+```
+npm install
+```
+3. Run the application:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```
+npm run dev
+```
+Open your browser and navigate to http://localhost:5173/
