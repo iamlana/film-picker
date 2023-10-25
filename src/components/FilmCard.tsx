@@ -19,12 +19,12 @@ export function FilmCard(props: FilmCardProps) {
   }, [props.film]);
 
   return (
-    <span className="flex flex-col text-center gap-4 md:gap-6 w-[310px] mx-auto">
+    <span className="flex flex-col text-center gap-4 md:gap-6 w-[310px] md:w-[360px] mx-auto">
       <span className="flex flex-row font-bold items-center h-[5vh] gap-4">
         <h3 className="grow text-left">{props.film?.title}</h3>
         <span className="flex-none flex flex-row justify-end items-center gap-2">
           <img src={Star} width="31px" />
-          {props.film?.starRating}
+          <p className="text-[32px]">{props.film?.starRating}</p>
         </span>
       </span>
       <div className="h-[50vh] max-w-full">

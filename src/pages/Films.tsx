@@ -76,7 +76,7 @@ export function Films() {
         <img src={AdmissionTickets} width="32px" />
         <p>{remainingPicks} picks remaining</p>
       </Link>
-      <div className="grow mb-4">
+      <div className="grow flex items-center mb-4">
         {currentFilmData && currentFilmData.posterLarge && (
           <FilmCard
             onLike={onLike}
