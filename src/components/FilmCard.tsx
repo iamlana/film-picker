@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Dislike from "../assets/dislike.png";
 import Like from "../assets/like.png";
 import Star from "../assets/star.png";
-import NoPoster from "../assets/no-poster.png";
 import { FilmProps } from "../types";
 
 interface FilmCardProps {
@@ -23,7 +22,7 @@ export function FilmCard(props: FilmCardProps) {
     <span className="flex flex-col text-center gap-4 md:gap-6 w-[310px] md:w-[360px] mx-auto">
       <span className="flex flex-row font-bold items-center h-[5vh] gap-4">
         <h3 className="grow text-left">{props.film?.title}</h3>
-        <span className="flex-none flex flex-row justify-end items-center gap-2">
+        <span className="flex-none flex flex-row justify-end items-center align-middle gap-2">
           <img src={Star} width="31px" />
           <p className="text-[32px]">{props.film?.starRating}</p>
         </span>
@@ -31,7 +30,7 @@ export function FilmCard(props: FilmCardProps) {
       <div className="h-[50vh] max-w-full">
         <img
           crossOrigin="anonymous"
-          src={isError ? NoPoster : props.film?.posterLarge}
+          src={isError ? props.film?.posterSmall : props.film?.posterLarge}
           onLoad={(e) =>
             props.onLoad && props.onLoad(e.target as HTMLImageElement)
           }

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AdmissionTickets from "../assets/admission-tickets.png";
 import { FilmCard } from "../components/FilmCard";
 import { PickedFilmsContext } from "../context";
-import getMainColors from "../gradient-definer";
+import { getMainColors } from "../getMainColors";
 import { FilmProps } from "../types";
 import { DeveloperInfo } from "../components/DeveloperInfo";
 
