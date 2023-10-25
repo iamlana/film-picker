@@ -16,17 +16,12 @@ export function Films() {
   const remainingPicks = 5 - pickedFilms.length;
   const [bgGradient, setBgGradient] = useState("");
 
-  const img: HTMLImageElement = new Image();
-  img.crossOrigin = "anonymous";
-  img.src = currentFilmData?.posterSmall;
-
-  img.onload = function () {
-    const [color1, color2] = getMainColors(img);
-
+  function onLoad(image: HTMLImageElement) {
+    const [color1, color2] = getMainColors(image);
     setBgGradient(
-      `radial-gradient(50% 50% at 50% 50%, ${color1} 0%, ${color2} 100%)`,
+      `radial-gradient(50% 50% at 50% 70%, ${color1} 0%, ${color2} 100%)`,
     );
-  };
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -80,6 +75,7 @@ export function Films() {
         {currentFilmData && currentFilmData.posterLarge && (
           <FilmCard
             onLike={onLike}
+            onLoad={onLoad}
             onDislike={onDislike}
             film={currentFilmData}
           />

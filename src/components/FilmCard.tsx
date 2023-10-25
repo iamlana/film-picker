@@ -9,6 +9,7 @@ interface FilmCardProps {
   onLike: () => void;
   onDislike: () => void;
   film: FilmProps;
+  onLoad?: (image: HTMLImageElement) => void;
 }
 
 export function FilmCard(props: FilmCardProps) {
@@ -29,9 +30,12 @@ export function FilmCard(props: FilmCardProps) {
       </span>
       <div className="h-[50vh] max-w-full">
         <img
+          crossOrigin="anonymous"
           src={isError ? NoPoster : props.film?.posterLarge}
+          onLoad={(e) =>
+            props.onLoad && props.onLoad(e.target as HTMLImageElement)
+          }
           className="w-full h-full object-contain"
-          loading="lazy"
           onError={() => setIsError(true)}
         />
       </div>

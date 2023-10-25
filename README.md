@@ -8,10 +8,10 @@ Introducing "Film Picker" – a curated selection of 250 films for you to discov
 
 ## 🌟 Features
 
- - **Vast Selection**: Dive into a collection of 250 films. After picking 5 films, you'll automatically be taken to a screen showcasing your choices.
- - **Like or Dislike** (Just like Tinder 😉): Express your cinematic taste by liking or disliking films.
- - **Dynamic Background**: Every film poster uniquely defines the background color, creating an immersive experience.
- - **Your Top 5**: After picking 5 films, get an overview screen displaying your selections.
+- **Vast Selection**: Dive into a collection of 250 films. After picking 5 films, you'll automatically be taken to a screen showcasing your choices.
+- **Like or Dislike** (Just like Tinder 😉): Express your cinematic taste by liking or disliking films.
+- **Dynamic Background**: Every film poster uniquely defines the background color, creating an immersive experience.
+- **Your Top 5**: After picking 5 films, get an overview screen displaying your selections.
 
 ## 🛠️ Tech Stack
 
@@ -22,20 +22,27 @@ Introducing "Film Picker" – a curated selection of 250 films for you to discov
 ## 🚀 Getting Started
 
 1. Clone the repository:
+
 ```
 git clone https://github.com/your-username/film-picker.git
 ```
+
 2. Navigate into the directory:
+
 ```
 cd film-picker
 ```
+
 3. Install dependencies:
+
 ```
 npm install
 ```
+
 3. Run the application:
 
 ```
 npm run dev
 ```
+
 Open your browser and navigate to http://localhost:5173/
